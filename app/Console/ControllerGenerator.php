@@ -29,7 +29,7 @@ class ControllerGenerator
 
 namespace App\Http\Controllers;
 
-use App\Http\BaseController;
+use App\BaseController;
 use App\Models\DB;
 use App\Utilities\Session;
 

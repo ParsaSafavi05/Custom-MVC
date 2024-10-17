@@ -1,5 +1,5 @@
 <?php
 
-$content = '404 not found';
+$content = 'what not found';
 
 $this->layout($content);
