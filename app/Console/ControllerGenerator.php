@@ -12,7 +12,9 @@ class ControllerGenerator
         if (!file_exists(Config::CONTROLLER_DIR)) {
             mkdir(Config::CONTROLLER_DIR, 0777, true);
         }
-        $controllerName = ucfirst($controllerName) . "Controller";
+
+        $rawName = ucfirst($controllerName);
+        $controllerName = ucfirst($rawName) . "Controller";
 
         $controllerFile = Config::CONTROLLER_DIR . $controllerName . '.php';
 
@@ -31,11 +33,11 @@ use App\Http\BaseController;
 use App\Models\DB;
 use App\Utilities\Session;
 
-class $controllerName
+class $controllerName extends BaseController
 {
     public function index()
     {
-        
+        \$this->view('$rawName/index', ['']);
     }
 }
 
